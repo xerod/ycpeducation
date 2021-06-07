@@ -13,7 +13,12 @@ module.exports = windmill({
   theme: {
     extend: {
       colors: {
+        orange: colors.orange,
         amber: colors.amber,
+        yellow: colors.yellow,
+      },
+      backgroundSize: {
+        overflow: "250% 100%",
       },
     },
   },
