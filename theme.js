@@ -1,9 +1,10 @@
 export default {
   button: {
+    base: "align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-all duration-300 font-medium focus:outline-none",
     primary: {
-      base: "text-amber-50 bg-amber-500 border border-transparent",
+      base: "text-white bg-gradient-to-br from-amber-500 via-orange-500 to-orange-600 bg-overflow",
       active:
-        "hover:text-amber-50 active:bg-amber-500 hover:bg-amber-600 focus:ring focus:ring-amber-50",
+        "transform focus:ring active:bg-left hover:bg-right focus:ring-orange-200 active:ring-0",
       disabled: "opacity-50 cursor-not-allowed",
     },
   },
