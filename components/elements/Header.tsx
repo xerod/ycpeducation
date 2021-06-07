@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 
 interface HeaderProps {
   children: ReactNode;
-  className: string;
+  className?: string;
 }
 
 const Header: React.FC<HeaderProps> = ({ children, className }) => {

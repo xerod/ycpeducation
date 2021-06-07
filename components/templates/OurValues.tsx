@@ -8,6 +8,8 @@ export default function OurValues() {
     <div className="relative px-16 min-h-screen bg-orange-50">
       <Header className="w-3/12">Our Value Proposition</Header>
 
+      <div className="absolute bottom-0 left-0 right-0 h-64 bg-white" />
+
       <img src="/ornament.svg" className="absolute left-10 bottom-28" />
 
       <div className="absolute left-16 right-16 grid grid-flow-col gap-5 mt-10">
