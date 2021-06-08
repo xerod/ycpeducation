@@ -16,6 +16,7 @@ module.exports = windmill({
         orange: colors.orange,
         amber: colors.amber,
         yellow: colors.yellow,
+        emerald: colors.emerald,
       },
       backgroundSize: {
         overflow: "250% 100%",
@@ -25,5 +26,5 @@ module.exports = windmill({
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 });
