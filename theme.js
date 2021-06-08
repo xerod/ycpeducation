@@ -7,5 +7,13 @@ export default {
         "transform focus:ring active:bg-left hover:bg-right focus:ring-orange-200 active:ring-0",
       disabled: "opacity-50 cursor-not-allowed",
     },
+    icon: {
+      larger: "h-5 w-5",
+      large: "h-5 w-5",
+      regular: "h-4 w-4",
+      small: "h-3 w-3",
+      left: "mr-2 -ml-1",
+      right: "ml-2 -mr-1",
+    },
   },
 };
