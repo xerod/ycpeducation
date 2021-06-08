@@ -4,6 +4,7 @@ import Default from "../components/layouts/Default";
 import HeroSection from "../components/templates/HeroSection";
 import OurValues from "../components/templates/OurValues";
 import OurProgrammes from "../components/templates/OurProgrammes";
+import OurCourse from "../components/templates/OurCourse";
 
 const Home: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ const Home: React.FC = () => {
       <HeroSection />
       <OurValues />
       <OurProgrammes />
+      <OurCourse />
     </div>
   );
 };

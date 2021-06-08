@@ -8,7 +8,7 @@ type DefaultLayoutProps = {
 
 const DefaultLayout: React.FC<DefaultLayoutProps> = ({ children }) => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen overflow-x-hidden">
       <Head>
         <title>YCP Education</title>
         <link rel="icon" href="/favicon.ico" />

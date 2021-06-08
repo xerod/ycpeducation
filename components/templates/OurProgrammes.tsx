@@ -9,11 +9,11 @@ import {
 import Image from "next/image";
 
 import Header from "../elements/Header";
-import ListCard, { DataType } from "../elements/ListCard";
+import ListCard, { ListCardDataType } from "../elements/ListCard";
 import { Button } from "@windmill/react-ui";
 
 export default function OurProgrammes() {
-  const data: DataType = [
+  const data: ListCardDataType = [
     {
       title: "Half-Day Program",
       body: "Partners can pick and choose from all the half-day program we offer to suit their schedules",

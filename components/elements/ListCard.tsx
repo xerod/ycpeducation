@@ -1,13 +1,13 @@
 import React from "react";
 
-export type DataType = Array<{
+export type ListCardDataType = Array<{
   title: string;
   body: string;
   iconLeft?: React.ReactNode;
 }>;
 
 interface ListCardProps {
-  data: DataType;
+  data: ListCardDataType;
 }
 
 const ListCard: React.FC<ListCardProps> = ({ data }) => {
@@ -15,6 +15,7 @@ const ListCard: React.FC<ListCardProps> = ({ data }) => {
     <div className="max-w-md shadow-lg rounded-xl border border-gray-200">
       {data.map((item, index) => (
         <div
+          key={item.title}
           className={
             index === 0 ? "flex p-8" : "flex p-8 border-t border-gray-200"
           }
