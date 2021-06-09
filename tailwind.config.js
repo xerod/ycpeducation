@@ -18,6 +18,7 @@ module.exports = windmill({
         amber: colors.amber,
         yellow: colors.yellow,
         emerald: colors.emerald,
+        gray: colors.warmGray,
       },
       backgroundSize: {
         overflow: "250% 100%",

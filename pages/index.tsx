@@ -9,6 +9,7 @@ import OurStrength from "../components/templates/OurStrength";
 import CaseStudy from "../components/templates/CaseStudy";
 import ClientTestimonials from "../components/templates/ClientTestimonials";
 import OurPartners from "../components/templates/OurPartners";
+import LeadGeneration from "../components/templates/LeadGeneration";
 
 const Home: React.FC = () => {
   return (
@@ -21,6 +22,7 @@ const Home: React.FC = () => {
       <CaseStudy />
       <ClientTestimonials />
       <OurPartners />
+      <LeadGeneration />
     </div>
   );
 };

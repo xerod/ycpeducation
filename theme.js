@@ -16,4 +16,34 @@ export default {
       right: "ml-2 -mr-1",
     },
   },
+  input: {
+    base: "block w-full text-sm focus:outline-none dark:text-gray-300 leading-5 rounded-md transition duration-300 shadow-sm",
+    active:
+      "focus:border-orange-300 border-gray-200 dark:border-gray-600 focus:ring focus:ring-orange-100 dark:focus:border-gray-600 dark:focus:ring-gray-300 dark:bg-gray-700",
+    disabled: "cursor-not-allowed opacity-50 bg-gray-300 dark:bg-gray-800",
+    valid:
+      "border-green-600 dark:bg-gray-700 focus:border-green-400 dark:focus:border-green-400 focus:ring focus:ring-green-200 dark:focus:ring-green-200",
+    invalid:
+      "border-red-600 dark:bg-gray-700 focus:border-red-400 dark:focus:border-red-400 focus:ring focus:ring-red-200 dark:focus:ring-red-200",
+    radio:
+      "text-orange-600 form-radio focus:border-orange-400 focus:outline-none focus:ring focus:ring-orange-300 focus:ring-offset-0 dark:focus:ring-gray-300",
+    checkbox:
+      "text-orange-600 form-checkbox focus:border-orange-400 focus:outline-none focus:ring focus:ring-orange-300 focus:ring-offset-0 rounded dark:focus:ring-gray-300",
+  },
+  label: {
+    base: "block text-sm text-gray-600 dark:text-gray-400",
+    // check and radio get this same style
+    check: "inline-flex items-center",
+    disabled: "opacity-50 cursor-not-allowed",
+  },
+  textarea: {
+    base: "block w-full text-sm dark:text-gray-300 rounded-md focus:outline-none transition duration-300 shadow-sm",
+    active:
+      "focus:border-orange-300 border-gray-200 dark:border-gray-600 dark:focus:border-gray-600 dark:bg-gray-700 dark:focus:ring-gray-300 focus:ring focus:ring-orange-100",
+    disabled: "cursor-not-allowed opacity-50 bg-gray-300 dark:bg-gray-800",
+    valid:
+      "border-green-600 dark:bg-gray-700 focus:border-green-400 dark:focus:border-green-400 focus:ring focus:ring-green-200 dark:focus:ring-green-200",
+    invalid:
+      "border-red-600 dark:bg-gray-700 focus:border-red-400 dark:focus:border-red-400 focus:ring focus:ring-red-200 dark:focus:ring-red-200",
+  },
 };
