@@ -6,6 +6,7 @@ import OurValues from "../components/templates/OurValues";
 import OurProgrammes from "../components/templates/OurProgrammes";
 import OurCourse from "../components/templates/OurCourse";
 import OurStrength from "../components/templates/OurStrength";
+import CaseStudy from "../components/templates/CaseStudy";
 
 const Home: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const Home: React.FC = () => {
       <OurProgrammes />
       <OurCourse />
       <OurStrength />
+      <CaseStudy />
     </div>
   );
 };
