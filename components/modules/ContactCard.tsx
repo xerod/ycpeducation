@@ -3,7 +3,7 @@ import { IoCallOutline, IoMailOutline } from "react-icons/io5";
 
 export default function ContactCard() {
   return (
-    <div className="relative flex py-14 px-16 mx-32 justify-between bg-gradient-to-r from-gray-900 to-gray-600 rounded-xl shadow-lg overflow-hidden z-50">
+    <div className="relative flex py-14 px-16 mx-32 justify-between bg-gradient-to-r from-gray-900 to-gray-600 rounded-xl shadow-xl overflow-hidden z-50">
       <img src="/map-base.svg" className="absolute top-0 left-0" />
       <div className="max-w-xs text-white">
         <p className="text-sm leading-5 font-bold text-gray-400">

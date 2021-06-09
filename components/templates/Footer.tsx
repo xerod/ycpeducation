@@ -9,44 +9,54 @@ export default function Footer() {
       <div className="w-full">
         <ContactCard />
       </div>
-      <div className="relative flex py-32 px-16 justify-between -mt-16 bg-gray-100 overflow-hidden z-0">
-        <div className="max-w-sm prose">
-          <h1 className="text-gray-800 leading-3">About Us</h1>
-          <p>
-            We are a B2B camp provider based in Singapore that provides unique
-            programs for travel agencies and schools looking to host camps and
-            immersion courses in Singapore.
-          </p>
-          <p>
-            We were previously known as SOMOS Summer Camp, after which we
-            rebranded ourselves to YCP Education in 2020 to further strengthen
-            our foothold in the educational services market.
-          </p>
+      <div className="relative flex pt-52 pb-12 px-16 justify-between items-center -mt-32 bg-gray-100 overflow-hidden z-0">
+        <div className="relative max-w-sm z-10">
+          <h1 className="text-4xl leading-10 font-bold text-gray-800">
+            About Us
+          </h1>
+
+          <div className="mt-4 leading-6 text-gray-800">
+            <p>
+              We are a B2B camp provider based in Singapore that provides unique
+              programs for travel agencies and schools looking to host camps and
+              immersion courses in Singapore.
+            </p>
+            <p className="mt-4">
+              We were previously known as SOMOS Summer Camp, after which we
+              rebranded ourselves to YCP Education in 2020 to further strengthen
+              our foothold in the educational services market.
+            </p>
+          </div>
         </div>
 
-        <div className="prose max-w-sm">
+        <div className="relative max-w-md z-10">
           <div className="flex items-center">
             <img
               src="/about-us-1.png"
               alt="Tatsuichiro Nishimura"
-              className="w-24 h-24 border-4 border-gray-50 rounded-full"
+              className="w-28 h-28 border-4 border-gray-50 rounded-full"
             />
             <div className="ml-6">
-              <h2 className="mt-4 mb-1">Tatsuichiro Nishimura</h2>
-              <p className="leading-5 text-gray-500">
+              <h2 className="mb-1 text-xl leading-7 font-medium text-gray-700">
+                Tatsuichiro Nishimura
+              </h2>
+              <p className="mr-24 leading-6 text-gray-500">
                 Chicago Booth MBA at Tokyo University
               </p>
             </div>
           </div>
-          <div className="flex items-center">
+
+          <div className="mt-8 flex items-center">
             <img
               src="/about-us-2.png"
               alt="Naithy Cyriac"
-              className="w-24 h-24 border-4 border-gray-50 rounded-full"
+              className="w-28 h-28 border-4 border-gray-50 rounded-full"
             />
             <div className="ml-6">
-              <h2 className="mt-4 mb-1">Naithy Cyriac</h2>
-              <p className=" text-lg leading-5 text-gray-500">
+              <h2 className="mb-1 text-xl leading-7 font-medium text-gray-700">
+                Naithy Cyriac
+              </h2>
+              <p className="mr-20 leading-6 text-gray-500">
                 Business School MBA National University of Singapore{" "}
               </p>
             </div>
@@ -55,8 +65,8 @@ export default function Footer() {
 
         <Image
           layout="fill"
-          src="/about-us-cover.jpg"
-          className="object-cover opacity-10"
+          src="/about-us-cover.png"
+          className="absolute object-cover opacity-10 z-0"
         />
       </div>
     </>
