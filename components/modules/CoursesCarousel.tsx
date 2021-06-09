@@ -202,7 +202,7 @@ export default function CoursesCarousel() {
                 </h3>
                 <div className="leading-6">
                   {data[selected].courseLevel.map((item) => (
-                    <div className="flex items-center mb-2">
+                    <div key={item} className="flex items-center mb-2">
                       <IoSchoolOutline className="w-5 h-5 text-indigo-600 mr-2" />
                       <p className="text-gray-500">{item}</p>
                     </div>
