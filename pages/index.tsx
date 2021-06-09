@@ -10,6 +10,7 @@ import CaseStudy from "../components/templates/CaseStudy";
 import ClientTestimonials from "../components/templates/ClientTestimonials";
 import OurPartners from "../components/templates/OurPartners";
 import LeadGeneration from "../components/templates/LeadGeneration";
+import Footer from "../components/templates/Footer";
 
 const Home: React.FC = () => {
   return (
@@ -23,6 +24,7 @@ const Home: React.FC = () => {
       <ClientTestimonials />
       <OurPartners />
       <LeadGeneration />
+      <Footer />
     </div>
   );
 };
