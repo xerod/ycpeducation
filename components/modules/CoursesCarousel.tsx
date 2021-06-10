@@ -136,7 +136,7 @@ export default function CoursesCarousel() {
   ];
 
   return (
-    <div className="flex flex-col lg:flex-row">
+    <div className="flex flex-col md:items-end lg:items-start lg:flex-row">
       <Description
         data={data}
         selected={selected}
@@ -144,7 +144,7 @@ export default function CoursesCarousel() {
         contain={false}
       />
 
-      <div className="relative w-full max-w-2xl">
+      <div className="relative w-full lg:max-w-xl xl:max-w-2xl">
         <div
           className="flex px-4 mb-4 overflow-x-scroll whitespace-nowrap scrollbar-hidden"
           style={{
@@ -173,7 +173,7 @@ export default function CoursesCarousel() {
           })}
         </div>
 
-        <div className="flex flex-col w-full mb-6 overflow-hidden bg-white border border-gray-100 lg:flex-row lg:shadow-lg lg:rounded-xl">
+        <div className="flex flex-col w-full mb-6 overflow-hidden bg-white border border-gray-100 lg:flex-row md:shadow-lg md:rounded-xl">
           <Description
             data={data}
             selected={selected}

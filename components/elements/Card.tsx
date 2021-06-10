@@ -14,7 +14,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ title, body, image, variant, icon }) => {
   if (variant === "cover") {
     return (
-      <div className="relative max-w-xl overflow-hidden shadow-xl rounded-xl bg-amber-800">
+      <div className="relative w-full overflow-hidden shadow-xl lg:max-w-xl rounded-xl bg-amber-800">
         {image ? (
           <Image
             width="100%"

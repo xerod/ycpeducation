@@ -9,7 +9,7 @@ export default function ContactCard() {
           GET IN TOUCH
         </p>
 
-        <p className="mt-2 text-2xl font-bold leading-7 lg:mr-20">
+        <p className="mt-2 text-2xl font-bold leading-7 md:mr-32 lg:mr-20">
           Please contact us for more information:{" "}
         </p>
 
@@ -24,7 +24,7 @@ export default function ContactCard() {
         </div>
       </div>
 
-      <div className="relative z-10 flex-col justify-end hidden max-w-xs pl-32 text-right text-white lg:flex">
+      <div className="relative z-10 flex-col justify-end hidden max-w-xs pl-32 text-right text-white sm:flex">
         <p className="text-lg font-bold leading-5">
           YCP Education Singapore Pte Ltd
         </p>

@@ -4,7 +4,7 @@ import Card from "../elements/Card";
 
 export default function CaseStudy() {
   return (
-    <div className="py-16 lg:py-32 lg:px-10 xl:px-16 bg-amber-50">
+    <div className="py-16 lg:py-32 md:px-10 xl:px-16 bg-amber-50">
       <Header className="text-center">Case Study</Header>
       <div className="relative grid grid-flow-row gap-8 px-4 lg:grid-flow-col mt-14">
         <img

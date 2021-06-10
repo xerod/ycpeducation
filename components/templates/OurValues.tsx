@@ -5,7 +5,7 @@ import Card from "../elements/Card";
 
 export default function OurValues() {
   return (
-    <div className="relative min-h-screen py-16 lg:px-10 xl:px-16 bg-orange-50">
+    <div className="relative flex flex-col min-h-screen py-16 md:items-center lg:px-10 xl:px-16 bg-orange-50">
       <Header className="w-6/12 ml-4 text-left lg:w-3/12 lg:mx-0">
         Our Value Proposition
       </Header>
@@ -14,10 +14,10 @@ export default function OurValues() {
 
       <img
         src="/ornament.svg"
-        className="absolute z-0 block opacity-0 left-10 bottom-28 lg:opacity-100"
+        className="absolute z-0 hidden lg:block left-10 bottom-28 "
       />
 
-      <div className="relative grid grid-flow-row gap-5 mt-10 lg:grid-flow-col z-11">
+      <div className="relative z-10 grid grid-flow-row gap-5 mt-10 lg:grid-flow-col">
         <Card
           title="Flexibility in planning your camps program"
           body="We are able to customize programs based on your requirements (age group, preferred English level), allowing you to comfortably plan your camps in Singapore"

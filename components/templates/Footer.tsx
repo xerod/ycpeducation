@@ -13,7 +13,7 @@ export default function Footer() {
         id="about-us"
         className="relative z-0 flex flex-col items-center justify-between px-4 pb-20 -mt-32 overflow-hidden bg-gray-100 lg:pb-32 lg:flex-row pt-52 lg:px-10 xl:px-16"
       >
-        <div className="relative z-10 max-w-sm mb-8 lg:mb-0">
+        <div className="relative z-10 w-full mb-8 lg:max-w-sm lg:mb-0">
           <h1 className="text-4xl font-bold leading-10 text-gray-800">
             About Us
           </h1>
@@ -32,7 +32,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="relative z-10 max-w-md">
+        <div className="relative z-10 w-full lg:max-w-md">
           <div className="flex items-center">
             <img
               src="/about-us-1.png"
