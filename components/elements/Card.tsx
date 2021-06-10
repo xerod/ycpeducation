@@ -14,13 +14,13 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ title, body, image, variant, icon }) => {
   if (variant === "cover") {
     return (
-      <div className="relative max-w-xl rounded-xl bg-amber-800 shadow-xl overflow-hidden">
+      <div className="relative max-w-xl overflow-hidden shadow-xl rounded-xl bg-amber-800">
         {image ? (
           <Image
             width="100%"
             height="60%"
             layout="responsive"
-            className="absolute top-0 w-full object-cover bg-mask-b-0 "
+            className="absolute top-0 object-cover w-full bg-mask-b-0 "
             src={image}
           />
         ) : null}
@@ -46,13 +46,13 @@ const Card: React.FC<CardProps> = ({ title, body, image, variant, icon }) => {
   }
 
   return (
-    <div className="flex flex-col max-w-xl bg-white shadow-md lg:rounded-xl overflow-hidden">
+    <div className="flex flex-col max-w-xl overflow-hidden bg-white shadow-md lg:rounded-xl">
       {image ? (
         <Image
           width="100%"
           height="60%"
           layout="responsive"
-          className="w-full object-cover"
+          className="object-cover w-full"
           src={image}
         />
       ) : null}
