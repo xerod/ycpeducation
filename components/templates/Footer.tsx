@@ -11,10 +11,10 @@ export default function Footer() {
       </div>
       <div
         id="about-us"
-        className="relative flex pt-52 pb-32 px-16 justify-between items-center -mt-32 bg-gray-100 overflow-hidden z-0"
+        className="relative z-0 flex flex-col items-center justify-between px-4 pb-20 -mt-32 overflow-hidden bg-gray-100 lg:pb-32 lg:flex-row pt-52 lg:px-10 xl:px-16"
       >
-        <div className="relative max-w-sm z-10">
-          <h1 className="text-4xl leading-10 font-bold text-gray-800">
+        <div className="relative z-10 max-w-sm mb-8 lg:mb-0">
+          <h1 className="text-4xl font-bold leading-10 text-gray-800">
             About Us
           </h1>
 
@@ -32,15 +32,15 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="relative max-w-md z-10">
+        <div className="relative z-10 max-w-md">
           <div className="flex items-center">
             <img
               src="/about-us-1.png"
               alt="Tatsuichiro Nishimura"
-              className="w-28 h-28 border-4 border-gray-50 rounded-full"
+              className="border-4 rounded-full w-28 h-28 border-gray-50"
             />
             <div className="ml-6">
-              <h2 className="mb-1 text-xl leading-7 font-medium text-gray-700">
+              <h2 className="mb-1 text-xl font-medium leading-7 text-gray-700">
                 Tatsuichiro Nishimura
               </h2>
               <p className="mr-24 leading-6 text-gray-500">
@@ -49,14 +49,14 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="mt-8 flex items-center">
+          <div className="flex items-center mt-8">
             <img
               src="/about-us-2.png"
               alt="Naithy Cyriac"
-              className="w-28 h-28 border-4 border-gray-50 rounded-full"
+              className="border-4 rounded-full w-28 h-28 border-gray-50"
             />
             <div className="ml-6">
-              <h2 className="mb-1 text-xl leading-7 font-medium text-gray-700">
+              <h2 className="mb-1 text-xl font-medium leading-7 text-gray-700">
                 Naithy Cyriac
               </h2>
               <p className="mr-20 leading-6 text-gray-500">
@@ -69,10 +69,10 @@ export default function Footer() {
         <Image
           layout="fill"
           src="/about-us-cover.png"
-          className="absolute object-cover opacity-10 z-0"
+          className="absolute z-0 object-cover opacity-10"
         />
 
-        <p className="absolute bottom-4 right-0 left-0 text-sm text-center text-gray-500">
+        <p className="absolute left-0 right-0 text-sm text-center text-gray-500 bottom-4">
           © {new Date().getFullYear()} YCP Solidiance. All Rights Reserved.
         </p>
       </div>
