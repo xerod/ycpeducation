@@ -46,7 +46,7 @@ const Card: React.FC<CardProps> = ({ title, body, image, variant, icon }) => {
   }
 
   return (
-    <div className="flex flex-col max-w-xl bg-white shadow-md rounded-xl overflow-hidden">
+    <div className="flex flex-col max-w-xl bg-white shadow-md lg:rounded-xl overflow-hidden">
       {image ? (
         <Image
           width="100%"

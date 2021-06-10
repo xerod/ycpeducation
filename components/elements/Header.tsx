@@ -7,7 +7,9 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ children, className }) => {
   return (
-    <h1 className={`text-5xl font-bold leading-none ${className}`}>
+    <h1
+      className={`text-3xl sm:text-4xl lg:text-5xl font-bold leading-none ${className}`}
+    >
       <mark
         className="text-yellow-900"
         style={{

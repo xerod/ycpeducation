@@ -5,14 +5,19 @@ import Card from "../elements/Card";
 
 export default function OurValues() {
   return (
-    <div className="relative px-16 min-h-screen bg-orange-50">
-      <Header className="w-3/12">Our Value Proposition</Header>
+    <div className="relative min-h-screen lg:px-10 xl:px-16 bg-orange-50">
+      <Header className="w-6/12 lg:w-3/12 ml-4 lg:mx-0 pt-8 text-left">
+        Our Value Proposition
+      </Header>
 
-      <div className="absolute bottom-0 left-0 right-0 h-64 bg-white" />
+      <div className="absolute hidden lg:block bottom-0 left-0 right-0 h-64 bg-white" />
 
-      <img src="/ornament.svg" className="absolute left-10 bottom-28" />
+      <img
+        src="/ornament.svg"
+        className="absolute hidden lg:block left-10 bottom-28"
+      />
 
-      <div className="absolute left-16 right-16 grid grid-flow-col gap-5 mt-10">
+      <div className="grid grid-flow-row lg:grid-flow-col gap-5 mt-10">
         <Card
           title="Flexibility in planning your camps program"
           body="We are able to customize programs based on your requirements (age group, preferred English level), allowing you to comfortably plan your camps in Singapore"
