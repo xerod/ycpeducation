@@ -6,12 +6,12 @@ import LogoAlt from "../elements/LogoAlt";
 
 export default function OurStrength() {
   return (
-    <div className="relative py-32 px-16 bg-white overflow-hidden z-10">
+    <div className="relative z-10 px-4 py-16 overflow-hidden bg-white lg:py-32 lg:px-10 xl:px-16">
       <Header>
         Our Strength <br /> as YCP Education
       </Header>
 
-      <div className="relative grid grid-flow-col gap-8 mt-14 z-10">
+      <div className="relative z-10 grid grid-flow-row gap-8 lg:grid-flow-col mt-14">
         <Card
           title="Global Footprint"
           body="With around 10 years in the education business in 5 countries, we have the deep expertise to curate programs that would be the most relevant for the current education scene"
@@ -32,7 +32,7 @@ export default function OurStrength() {
         />
       </div>
 
-      <LogoAlt className="absolute top-20 -right-64 w-8/12 h-8/12 z-0 text-gray-100 text-opacity-70" />
+      <LogoAlt className="absolute z-0 w-8/12 text-gray-100 top-20 -right-64 h-8/12 text-opacity-70" />
     </div>
   );
 }
