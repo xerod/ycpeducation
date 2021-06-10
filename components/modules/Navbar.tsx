@@ -39,14 +39,17 @@ export default function Navbar(props) {
 
   return (
     <div
-      className={`fixed w-full py-3 px-16 z-50 transition duration-200 ${
+      className={`fixed w-full py-3 px-2 lg:px-16 z-50 transition duration-200 ${
         isScrolled ? `bg-transparent` : `bg-white border-b border-opacity-70`
       }`}
     >
       <div className="flex w-full items-center justify-between">
         <Logo
-          height={isScrolled ? 38 : 28}
-          className={isScrolled ? "text-orange-50" : "text-gray-500"}
+          className={
+            isScrolled
+              ? "h-7 lg:h-9 text-orange-50"
+              : "h-7 lg:h-9 text-gray-500"
+          }
         />
 
         <div className="hidden lg:flex items-center">
