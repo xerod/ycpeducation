@@ -33,15 +33,18 @@ export default function OurProgrammes() {
   ];
 
   return (
-    <div className="min-h-screen px-16 bg-white">
-      <Header className="m">Our Programmes</Header>
+    <div className="min-h-screen mt-32 lg:px-10 xl:px-16 bg-white">
+      <Header className="mx-4">Our Programmes</Header>
 
       <div className="flex mt-10">
         <ListCard data={data} />
 
         <div className="relative items-center justify-center">
-          <img src="/ornament.svg" className="absolute left-12 bottom-12" />
-          <div className="ml-16">
+          <img
+            src="/ornament.svg"
+            className="absolute hidden lg:block left-12 bottom-12"
+          />
+          <div className="hidden lg:block">
             <Image width={600} height={600} src="/our-programmes.png" />
           </div>
         </div>

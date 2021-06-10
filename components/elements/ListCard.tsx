@@ -12,7 +12,7 @@ interface ListCardProps {
 
 const ListCard: React.FC<ListCardProps> = ({ data }) => {
   return (
-    <div className="max-w-md shadow-lg rounded-xl border border-gray-200">
+    <div className="max-w-md shadow-lg lg:rounded-xl border border-gray-200">
       {data.map((item, index) => (
         <div
           key={item.title}
