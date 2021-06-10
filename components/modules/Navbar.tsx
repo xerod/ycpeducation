@@ -7,18 +7,16 @@ export default function Navbar(props) {
   const [isScrolled, setIsScrolled] = useState(true);
 
   useEffect(() => {
-    document.addEventListener("scroll", () => {
-      setIsScrolled(() => {
-        return window.scrollY < 100;
-      });
-      // if (window.scrollY < 100) {
-      //   setNavbarBgStyle("bg-transparent");
-      //   setTextStyle("text-orange-50");
-      // } else {
-      //   setNavbarBgStyle("bg-white border-b");
-      //   setTextStyle("text-gray-600");
-      // }
-    });
+    const checkScrollingFunction = () => {
+      const isPositionDown = window.scrollY < 100;
+      setIsScrolled(isPositionDown);
+    };
+
+    document.addEventListener("scroll", checkScrollingFunction);
+
+    return () => {
+      document.removeEventListener("scroll", checkScrollingFunction);
+    };
   }, []);
 
   const linkHoverStyle = () => {
