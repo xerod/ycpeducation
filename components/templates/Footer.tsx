@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="w-full">
         <ContactCard />
       </div>
-      <div className="relative flex pt-52 pb-12 px-16 justify-between items-center -mt-32 bg-gray-100 overflow-hidden z-0">
+      <div className="relative flex pt-52 pb-32 px-16 justify-between items-center -mt-32 bg-gray-100 overflow-hidden z-0">
         <div className="relative max-w-sm z-10">
           <h1 className="text-4xl leading-10 font-bold text-gray-800">
             About Us
@@ -68,6 +68,10 @@ export default function Footer() {
           src="/about-us-cover.png"
           className="absolute object-cover opacity-10 z-0"
         />
+
+        <p className="absolute bottom-4 right-0 left-0 text-sm text-center text-gray-500">
+          © {new Date().getFullYear()} YCP Solidiance. All Rights Reserved.
+        </p>
       </div>
     </>
   );

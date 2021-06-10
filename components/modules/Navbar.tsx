@@ -1,28 +1,64 @@
 import { Button } from "@windmill/react-ui";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import LocaleDropdown from "./LocaleDropdown";
 import Logo from "../elements/Logo";
 
 export default function Navbar(props) {
-  const linkHoverStyle =
-    "mr-1 text-orange-50 hover:text-white hover:bg-orange-300 active:text-orange-800 active:bg-orange-200 hover:bg-opacity-50";
+  const [isScrolled, setIsScrolled] = useState(true);
+
+  useEffect(() => {
+    document.addEventListener("scroll", () => {
+      setIsScrolled(() => {
+        return window.scrollY < 100;
+      });
+      // if (window.scrollY < 100) {
+      //   setNavbarBgStyle("bg-transparent");
+      //   setTextStyle("text-orange-50");
+      // } else {
+      //   setNavbarBgStyle("bg-white border-b");
+      //   setTextStyle("text-gray-600");
+      // }
+    });
+  }, []);
+
+  const linkHoverStyle = () => {
+    const base_class = "mr-1 transform focus:ring-0 ";
+
+    if (isScrolled) {
+      return (
+        base_class + "text-amber-50 hover:text-orange-200 hover:bg-transparent"
+      );
+    } else {
+      return (
+        base_class +
+        "hover:text-orange-700 active:text-amber-700 hover:bg-orange-100 active:bg-orange-200"
+      );
+    }
+  };
 
   return (
-    <div className="fixed top-4 right-16 left-16 z-50">
+    <div
+      className={`fixed w-full py-4 px-16 z-50 transition duration-200 ${
+        isScrolled ? `bg-transparent` : `bg-white border-b`
+      }`}
+    >
       <div className="flex w-full items-center justify-between">
-        <Logo height="38" className="text-orange-50" />
+        <Logo
+          height="38"
+          className={isScrolled ? "text-orange-50" : "text-gray-900"}
+        />
 
         <div className="flex items-center">
-          <Button layout="link" className={linkHoverStyle}>
+          <Button layout="link" className={linkHoverStyle()}>
             Home
           </Button>
-          <Button layout="link" className={linkHoverStyle}>
+          <Button layout="link" className={linkHoverStyle()}>
             About Us
           </Button>
-          <Button layout="link" className={linkHoverStyle}>
+          <Button layout="link" className={linkHoverStyle()}>
             Our Courses
           </Button>
-          <Button layout="link" className={linkHoverStyle}>
+          <Button layout="link" className={linkHoverStyle()}>
             Contact Us
           </Button>
           <LocaleDropdown />

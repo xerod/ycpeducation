@@ -164,8 +164,8 @@ export default function CoursesCarousel() {
             const isSelected = selected === index;
 
             const bgColour = isSelected
-              ? "bg-amber-300 hover:bg-amber-400"
-              : "hover:text-orange-600";
+              ? "bg-amber-300 hover:bg-amber-300 hover:bg-opacity-80 text-opacity-100"
+              : "text-opacity-60 hover:text-opacity-100";
 
             return (
               <span
@@ -179,7 +179,7 @@ export default function CoursesCarousel() {
           })}
         </div>
 
-        <div className="flex w-full border border-gray-100 rounded-xl bg-white shadow-lg overflow-hidden">
+        <div className="flex w-full mb-6 border border-gray-100 rounded-xl bg-white shadow-lg overflow-hidden">
           <div className="min-w-max px-12 py-8">
             <div className="max-w-prose mb-6">
               <h3 className="text-xl leading-10 text-gray-700 font-semibold">

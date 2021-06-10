@@ -17,7 +17,7 @@ const ListCard: React.FC<ListCardProps> = ({ data }) => {
         <div
           key={item.title}
           className={
-            index === 0 ? "flex p-8" : "flex p-8 border-t border-gray-200"
+            index === 0 ? "flex p-8" : "flex p-8 border-t border-gray-100"
           }
         >
           {item.iconLeft ? (

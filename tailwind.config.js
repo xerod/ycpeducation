@@ -21,10 +21,14 @@ module.exports = windmill({
         gray: colors.warmGray,
       },
       backgroundSize: {
-        overflow: "250% 100%",
+        overflow: "400% 100%",
       },
       zIndex: {
         "-10": "-10",
+      },
+      transitionProperty: {
+        DEFAULT:
+          "background-position, background-color, border-color, color, fill, stroke, opacity, box-shadow, transform",
       },
     },
   },

@@ -3,9 +3,8 @@ import { IoCallOutline, IoMailOutline } from "react-icons/io5";
 
 export default function ContactCard() {
   return (
-    <div className="relative flex py-14 px-16 mx-32 justify-between bg-gradient-to-r from-gray-900 to-gray-600 rounded-xl shadow-xl overflow-hidden z-50">
-      <img src="/map-base.svg" className="absolute top-0 left-0" />
-      <div className="max-w-xs text-white">
+    <div className="relative flex py-14 px-16 mx-32 justify-between bg-gradient-to-r from-gray-900 to-gray-600 rounded-xl shadow-xl overflow-hidden z-10">
+      <div className="relative max-w-xs text-white z-10">
         <p className="text-sm leading-5 font-bold text-gray-400">
           GET IN TOUCH
         </p>
@@ -25,7 +24,7 @@ export default function ContactCard() {
         </div>
       </div>
 
-      <div className="flex flex-col justify-end pl-32 max-w-xs text-white text-right">
+      <div className="relative flex flex-col justify-end pl-32 max-w-xs text-white text-right z-10">
         <p className="text-lg leading-5 font-bold">
           YCP Education Singapore Pte Ltd
         </p>
@@ -34,6 +33,8 @@ export default function ContactCard() {
           5 Temasek Boulevard, #11-02, Suntec Tower Five, Singapore 038985
         </p>
       </div>
+
+      <img src="/map-base.svg" className="absolute top-0 left-0 z-0" />
     </div>
   );
 }

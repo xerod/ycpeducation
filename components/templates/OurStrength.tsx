@@ -6,7 +6,7 @@ import LogoAlt from "../elements/LogoAlt";
 
 export default function OurStrength() {
   return (
-    <div className="relative py-32 px-16 bg-white overflow-hidden z-50">
+    <div className="relative py-32 px-16 bg-white overflow-hidden z-10">
       <Header>
         Our Strength <br /> as YCP Education
       </Header>
