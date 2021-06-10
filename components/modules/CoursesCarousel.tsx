@@ -17,6 +17,13 @@ export type CoursesCarouselDataType = Array<{
   image: string;
 }>;
 
+interface DescriptionProps {
+  data: CoursesCarouselDataType;
+  selected: number;
+  className?: string;
+  contain: boolean;
+}
+
 export default function CoursesCarousel() {
   const [selected, setSelected] = useState(0);
 
@@ -129,30 +136,17 @@ export default function CoursesCarousel() {
   ];
 
   return (
-    <div className="flex">
-      <div className="max-w-md prose mr-24 mt-9">
-        <h2 className="pl-3 mb-2 leading-none font-medium text-amber-800 text-opacity-80 border-l-[3px] border-orange-500">
-          {data[selected].course}
-        </h2>
+    <div className="flex flex-col lg:flex-row">
+      <Description
+        data={data}
+        selected={selected}
+        className="hidden lg:block"
+        contain={false}
+      />
 
-        {data[selected].description.map((item) => (
-          <p key={item} className="pl-4 text-amber-800 text-opacity-80">
-            {item}
-          </p>
-        ))}
-
-        <Button
-          layout="link"
-          iconRight={IoChevronForward}
-          className=" text-amber-600 hover:bg-transparent"
-        >
-          I'm interested
-        </Button>
-      </div>
-
-      <div className="relative max-w-2xl w-full">
+      <div className="relative w-full max-w-2xl">
         <div
-          className="flex mb-4 px-4 overflow-x-scroll whitespace-nowrap scrollbar-hidden"
+          className="flex px-4 mb-4 overflow-x-scroll whitespace-nowrap scrollbar-hidden"
           style={{
             WebkitMaskImage:
               "linear-gradient(90deg,transparent,#000 16px,#000 calc(100% - 16px),transparent)",
@@ -179,16 +173,23 @@ export default function CoursesCarousel() {
           })}
         </div>
 
-        <div className="flex w-full mb-6 border border-gray-100 rounded-xl bg-white shadow-lg overflow-hidden">
-          <div className="min-w-max px-12 py-8">
-            <div className="max-w-prose mb-6">
-              <h3 className="text-xl leading-10 text-gray-700 font-semibold">
+        <div className="flex flex-col w-full mb-6 overflow-hidden bg-white border border-gray-100 lg:flex-row lg:shadow-lg lg:rounded-xl">
+          <Description
+            data={data}
+            selected={selected}
+            contain={true}
+            className="block lg:hidden"
+          />
+
+          <div className="px-4 py-8 lg:px-12 min-w-max">
+            <div className="mb-6 max-w-prose">
+              <h3 className="text-xl font-semibold leading-10 text-gray-700">
                 Skills
               </h3>
               <div className="leading-6">
                 {data[selected].skills.map((item) => (
                   <div key={item} className="flex items-center mb-2">
-                    <IoCubeOutline className="w-5 h-5 text-emerald-600 mr-2" />
+                    <IoCubeOutline className="w-5 h-5 mr-2 text-emerald-600" />
                     <p className="text-gray-500">{item}</p>
                   </div>
                 ))}
@@ -197,13 +198,13 @@ export default function CoursesCarousel() {
 
             {data[selected].courseLevel.length ? (
               <div className="max-w-xs mb-6">
-                <h3 className="text-xl leading-10 text-gray-700 font-semibold">
+                <h3 className="text-xl font-semibold leading-10 text-gray-700">
                   Course Level
                 </h3>
                 <div className="leading-6">
                   {data[selected].courseLevel.map((item) => (
                     <div key={item} className="flex items-center mb-2">
-                      <IoSchoolOutline className="w-5 h-5 text-indigo-600 mr-2" />
+                      <IoSchoolOutline className="w-5 h-5 mr-2 text-indigo-600" />
                       <p className="text-gray-500">{item}</p>
                     </div>
                   ))}
@@ -212,14 +213,14 @@ export default function CoursesCarousel() {
             ) : null}
 
             <div className="mb-6">
-              <h3 className="text-xl leading-8 text-gray-700 font-semibold">
+              <h3 className="text-xl font-semibold leading-8 text-gray-700">
                 Suitable Age
               </h3>
               <p className="text-gray-500">{data[selected].forAge}</p>
             </div>
 
             <div className="max-w-xs mb-6">
-              <h3 className="text-xl leading-8 text-gray-700 font-semibold">
+              <h3 className="text-xl font-semibold leading-8 text-gray-700">
                 Courses Fee
               </h3>
               <p className="text-gray-500">
@@ -237,7 +238,7 @@ export default function CoursesCarousel() {
 
           <div>
             <img
-              className="min-h-full max-w-md object-cover"
+              className="hidden object-cover max-w-md min-h-full lg:block"
               src={data[selected].image}
             />
           </div>
@@ -246,3 +247,40 @@ export default function CoursesCarousel() {
     </div>
   );
 }
+
+const Description: React.FC<DescriptionProps> = (props) => {
+  const { data, selected, contain, className } = props;
+  const borderColor = contain ? "border-transparent" : "border-orange-500";
+  const headerColor = contain ? "text-gray-900" : "text-amber-800";
+  const textColor = contain ? "text-gray-600" : "text-amber-800";
+
+  return (
+    <div
+      className={
+        contain
+          ? `mr-4 prose lg:max-w-md lg:mr-24 lg:mb-0 mt-9 ${className}`
+          : `mb-12 mr-4 prose lg:max-w-md lg:mr-24 lg:mb-0 mt-9 ${className}`
+      }
+    >
+      <h2
+        className={`pl-3 mb-2 leading-none font-medium ${headerColor} text-opacity-80 border-l-[3px] ${borderColor}`}
+      >
+        {data[selected].course}
+      </h2>
+
+      {data[selected].description.map((item) => (
+        <p key={item} className={`pl-4 ${textColor} text-opacity-80`}>
+          {item}
+        </p>
+      ))}
+
+      <Button
+        layout="link"
+        iconRight={IoChevronForward}
+        className={`text-amber-600 hover:bg-transparent`}
+      >
+        I'm interested
+      </Button>
+    </div>
+  );
+};

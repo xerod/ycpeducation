@@ -5,17 +5,18 @@ import CoursesCarousel from "../modules/CoursesCarousel";
 
 export default function OurCourse() {
   return (
-    <div id="our-courses" className="relative min-h-screen px-16 bg-orange-50">
+    <div
+      id="our-courses"
+      className="relative min-h-screen pb-20 lg:pb-0 lg:px-10 xl:px-16 bg-orange-50"
+    >
       <SectionOverflow
-        height="6rem"
-        width="100%"
-        className="absolute bottom-0 -mt-24 w-full text-white"
+        className="absolute inset-x-0 bottom-0 hidden text-white lg:block"
         style={{
           transform: "scale(-1, 1)",
         }}
       />
 
-      <div className="pt-12">
+      <div className="pt-12 mx-4 lg:mx-0">
         <Header>Our Course</Header>
         <p className="max-w-3xl mt-4 text-amber-800 text-opacity-80">
           YCP Education offers a holistic range of programs, spanning from
@@ -26,7 +27,7 @@ export default function OurCourse() {
         </p>
       </div>
 
-      <div className="mt-4">
+      <div className="mt-12 lg:mt-4">
         <CoursesCarousel />
       </div>
     </div>
