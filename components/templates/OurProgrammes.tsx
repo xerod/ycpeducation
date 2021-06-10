@@ -11,6 +11,7 @@ import Image from "next/image";
 import Header from "../elements/Header";
 import ListCard, { ListCardDataType } from "../elements/ListCard";
 import { Button } from "@windmill/react-ui";
+import scrollTo from "../../utils/scrollTo";
 
 export default function OurProgrammes() {
   const data: ListCardDataType = [
@@ -47,7 +48,12 @@ export default function OurProgrammes() {
       </div>
 
       <div className="flex w-full justify-center my-16">
-        <Button size="large" iconRight={IoArrowForward} className="shadow-xl">
+        <Button
+          size="large"
+          iconRight={IoArrowForward}
+          className="shadow-xl"
+          onClick={() => scrollTo("contact-us")}
+        >
           Fill Out Inquiry Form
         </Button>
       </div>

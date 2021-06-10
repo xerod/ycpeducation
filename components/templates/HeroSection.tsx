@@ -2,10 +2,12 @@ import React from "react";
 import { Button } from "@windmill/react-ui";
 import SectionOverflow from "../elements/SectionOverflow";
 import { IoArrowForwardOutline, IoCallSharp } from "react-icons/io5";
+import scrollTo from "../../utils/scrollTo";
 
 export default function HeroSection() {
   return (
     <div
+      id="hero-section"
       className="min-h-screen"
       style={{
         backgroundImage: "url('/image5.jpg')",
@@ -20,7 +22,12 @@ export default function HeroSection() {
             Customize a camp program that will effectively equip your students
             with a global perspective and the skills to succeed!
           </p>
-          <Button iconRight={IoArrowForwardOutline}>Contact Us</Button>
+          <Button
+            iconRight={IoArrowForwardOutline}
+            onClick={() => scrollTo("contact-us")}
+          >
+            Contact Us
+          </Button>
         </div>
       </div>
       <SectionOverflow

@@ -5,7 +5,7 @@ import CoursesCarousel from "../modules/CoursesCarousel";
 
 export default function OurCourse() {
   return (
-    <div className="relative min-h-screen px-16 bg-orange-50">
+    <div id="our-courses" className="relative min-h-screen px-16 bg-orange-50">
       <SectionOverflow
         height="6rem"
         width="100%"

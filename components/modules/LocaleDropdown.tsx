@@ -12,6 +12,7 @@ export default function LocaleDropdown() {
   return (
     <div className="relative">
       <Button
+        size="small"
         onClick={toggleDropdown}
         className="bg-white border-0 active:bg-white focus:bg-white"
         aria-label="Notifications"
