@@ -49,7 +49,7 @@ export default function Navbar(props) {
           className={isScrolled ? "text-orange-50" : "text-gray-500"}
         />
 
-        <div className="flex items-center">
+        <div className="hidden lg:flex items-center">
           <Button
             size="small"
             layout="link"
@@ -82,6 +82,9 @@ export default function Navbar(props) {
           >
             Contact Us
           </Button>
+          <LocaleDropdown />
+        </div>
+        <div className="flex lg:hidden items-center">
           <LocaleDropdown />
         </div>
       </div>
