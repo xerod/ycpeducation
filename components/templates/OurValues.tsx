@@ -5,7 +5,7 @@ import Card from "../elements/Card";
 
 export default function OurValues() {
   return (
-    <div className="relative flex flex-col min-h-screen py-16 md:items-center lg:px-10 xl:px-16 bg-orange-50">
+    <div className="relative flex flex-col items-start min-h-screen py-16 md:items-center lg:items-start lg:px-10 xl:px-16 bg-orange-50">
       <Header className="w-6/12 ml-4 text-left lg:w-3/12 lg:mx-0">
         Our Value Proposition
       </Header>

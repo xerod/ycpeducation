@@ -43,16 +43,16 @@ export default function Navbar(props) {
         isScrolled ? `bg-transparent` : `bg-white border-b border-opacity-70`
       }`}
     >
-      <div className="flex w-full items-center justify-between">
+      <div className="flex items-center justify-between w-full">
         <Logo
           className={
             isScrolled
               ? "h-7 lg:h-9 text-orange-50"
-              : "h-7 lg:h-9 text-gray-500"
+              : "h-7 lg:h-9 text-gray-600"
           }
         />
 
-        <div className="hidden lg:flex items-center">
+        <div className="items-center hidden lg:flex">
           <Button
             size="small"
             layout="link"
@@ -87,7 +87,7 @@ export default function Navbar(props) {
           </Button>
           <LocaleDropdown />
         </div>
-        <div className="flex lg:hidden items-center">
+        <div className="flex items-center lg:hidden">
           <LocaleDropdown />
         </div>
       </div>

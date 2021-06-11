@@ -3,10 +3,11 @@ import React from "react";
 import Navbar from "../modules/Navbar";
 
 type DefaultLayoutProps = {
-  children: React.ReactNode;
+  children: React.ReactElement;
 };
 
-const DefaultLayout: React.FC<DefaultLayoutProps> = ({ children }) => {
+const DefaultLayout: React.FC<DefaultLayoutProps> = (props) => {
+  const { children } = props;
   return (
     <div className="flex flex-col min-h-screen overflow-x-hidden">
       <Head>
