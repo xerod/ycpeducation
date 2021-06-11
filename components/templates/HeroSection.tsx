@@ -5,11 +5,13 @@ import { IoArrowForwardOutline } from "react-icons/io5";
 import Image from "next/image";
 
 import scrollTo from "../../utils/scrollTo";
+import imageLoader from "../../utils/imageLoader";
 
 export default function HeroSection() {
   return (
     <div id="hero-section" className="relative overflow-hidden bg-amber-800">
       <Image
+        loader={imageLoader}
         layout="fill"
         src="/image5.jpg"
         alt="Kids Learning"

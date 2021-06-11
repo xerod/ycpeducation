@@ -11,7 +11,9 @@ import Image from "next/image";
 import Header from "../elements/Header";
 import ListCard, { ListCardDataType } from "../elements/ListCard";
 import { Button } from "@windmill/react-ui";
+
 import scrollTo from "../../utils/scrollTo";
+import imageLoader from "../../utils/imageLoader";
 
 export default function OurProgrammes() {
   const data: ListCardDataType = [
@@ -33,7 +35,7 @@ export default function OurProgrammes() {
   ];
 
   return (
-    <div className="min-h-screen mt-32 lg:px-10 xl:px-16 bg-white">
+    <div className="min-h-screen mt-32 bg-white lg:px-10 xl:px-16">
       <Header className="mx-4">Our Programmes</Header>
 
       <div className="flex mt-10">
@@ -45,12 +47,12 @@ export default function OurProgrammes() {
             className="absolute hidden lg:block left-12 bottom-12"
           />
           <div className="hidden lg:block">
-            <Image width={600} height={600} src="/our-programmes.png" />
+            <Image loader={imageLoader} width={600} height={600} src="/our-programmes.png" />
           </div>
         </div>
       </div>
 
-      <div className="flex w-full justify-center my-16">
+      <div className="flex justify-center w-full my-16">
         <Button
           size="large"
           iconRight={IoArrowForward}

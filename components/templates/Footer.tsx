@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 
+import imageLoader from "../../utils/imageLoader";
+
 import ContactCard from "../modules/ContactCard";
 
 export default function Footer() {
@@ -67,6 +69,7 @@ export default function Footer() {
         </div>
 
         <Image
+          loader={imageLoader}
           layout="fill"
           src="/about-us-cover.png"
           className="absolute z-0 object-cover opacity-10"

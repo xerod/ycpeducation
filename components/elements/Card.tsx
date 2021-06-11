@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 
+import imageLoader from "../../utils/imageLoader";
+
 type CardVariant = "transparent" | "cover";
 
 interface CardProps {
@@ -17,6 +19,7 @@ const Card: React.FC<CardProps> = ({ title, body, image, variant, icon }) => {
       <div className="relative w-full overflow-hidden shadow-xl lg:max-w-xl rounded-xl bg-amber-800">
         {image ? (
           <Image
+            loader={imageLoader}
             width="100%"
             height="60%"
             layout="responsive"
@@ -49,6 +52,7 @@ const Card: React.FC<CardProps> = ({ title, body, image, variant, icon }) => {
     <div className="flex flex-col max-w-xl overflow-hidden bg-white shadow-md lg:rounded-xl">
       {image ? (
         <Image
+          loader={imageLoader}
           width="100%"
           height="60%"
           layout="responsive"

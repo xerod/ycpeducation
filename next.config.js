@@ -1,6 +1,10 @@
 const WebpackBar = require("webpackbar");
 
 module.exports = {
+  images: {
+    loader: "imgix",
+    path: "",
+  },
   future: {
     webpack5: true,
   },
