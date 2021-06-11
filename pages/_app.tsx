@@ -27,12 +27,6 @@ export default function App({
         <title>App</title>
       </Head>
 
-      <RenderWhere server>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </RenderWhere>
-
       <RenderWhere client>
         <Windmill theme={theme}>
           <Layout>
