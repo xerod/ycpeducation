@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../elements/Header";
 import Card from "../elements/Card";
+import imageLoader from "../../utils/imageLoader";
 
 export default function CaseStudy() {
   return (
@@ -8,7 +9,9 @@ export default function CaseStudy() {
       <Header className="text-center">Case Study</Header>
       <div className="relative grid grid-flow-row gap-8 px-4 lg:grid-flow-col mt-14">
         <img
-          src="/ornament.svg"
+          src={imageLoader({
+            src: "/ornament.svg",
+          })}
           className="absolute transform rotate-90 -left-20 -bottom-16 lg:bottom-0 lg:left-4"
         />
         <Card

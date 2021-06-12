@@ -1,6 +1,7 @@
 const WebpackBar = require("webpackbar");
 
 module.exports = {
+  assetPrefix: ".",
   images: {
     loader: "imgix",
     path: "",

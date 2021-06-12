@@ -29,6 +29,12 @@ const Home: React.FC = () => {
   );
 };
 
+export async function getStaticProps() {
+  return {
+    props: {},
+  };
+}
+
 (Home as PageWithLayoutType).layout = Default;
 
 export default Home;

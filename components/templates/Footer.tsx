@@ -37,7 +37,9 @@ export default function Footer() {
         <div className="relative z-10 w-full lg:max-w-md">
           <div className="flex items-center">
             <img
-              src="/about-us-1.png"
+              src={imageLoader({
+                src: "/about-us-1.png",
+              })}
               alt="Tatsuichiro Nishimura"
               className="border-4 rounded-full w-28 h-28 border-gray-50"
             />
@@ -53,7 +55,9 @@ export default function Footer() {
 
           <div className="flex items-center mt-8">
             <img
-              src="/about-us-2.png"
+              src={imageLoader({
+                src: "/about-us-2.png",
+              })}
               alt="Naithy Cyriac"
               className="border-4 rounded-full w-28 h-28 border-gray-50"
             />

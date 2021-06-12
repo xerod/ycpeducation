@@ -7,6 +7,7 @@ import {
   IoCubeOutline,
   IoSchoolOutline,
 } from "react-icons/io5";
+import imageLoader from "../../utils/imageLoader";
 
 export type CoursesCarouselDataType = Array<{
   course: string;
@@ -239,7 +240,9 @@ export default function CoursesCarousel() {
           <div>
             <img
               className="hidden object-cover max-w-md min-h-full lg:block"
-              src={data[selected].image}
+              src={imageLoader({
+                src: data[selected].image,
+              })}
             />
           </div>
         </div>

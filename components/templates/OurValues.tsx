@@ -2,6 +2,7 @@ import React from "react";
 
 import Header from "../elements/Header";
 import Card from "../elements/Card";
+import imageLoader from "../../utils/imageLoader";
 
 export default function OurValues() {
   return (
@@ -13,7 +14,9 @@ export default function OurValues() {
       <div className="absolute bottom-0 left-0 right-0 hidden h-64 bg-white lg:block" />
 
       <img
-        src="/ornament.svg"
+        src={imageLoader({
+          src: "/ornament.svg"
+        })}
         className="absolute z-0 hidden lg:block left-10 bottom-28 "
       />
 

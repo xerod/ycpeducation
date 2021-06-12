@@ -43,7 +43,9 @@ export default function OurProgrammes() {
 
         <div className="relative items-center justify-center">
           <img
-            src="/ornament.svg"
+          src={imageLoader({
+            src: "/ornament.svg"
+          })}
             className="absolute hidden lg:block left-12 bottom-12"
           />
           <div className="hidden lg:block">
