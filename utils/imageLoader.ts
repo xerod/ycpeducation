@@ -7,11 +7,15 @@ type ImageLoaderType = {
 const imageLoader = (params: ImageLoaderType) => {
   const { src, width, quality } = params;
 
-  // const isStaticExport = process.env.BUILD_TYPE === "static";
-  // const parsedSrc = isStaticExport ? `images/${src}` : `${src}`;
-  const parsedSrc = `images/${src}`;
+  const isExportingForDev = process.env.NODE_ENV == "development";
+  const parsedSrc = isExportingForDev
+    ? `images${src}?w=${width}&q=${quality || 75}`
+    : `images/${src}`;
 
-  return `${parsedSrc}`;
+  // const parsedSrc = `images/${src}`;
+  // const parsedSrc = `images${src}?w=${width}&q=${quality || 75}`;
+
+  return parsedSrc;
 };
 
 export default imageLoader;

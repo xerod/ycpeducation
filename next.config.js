@@ -2,12 +2,12 @@ const WebpackBar = require("webpackbar");
 
 module.exports = {
   assetPrefix: ".",
-  images: {
-    loader: "imgix",
-    path: "",
-  },
   future: {
     webpack5: true,
+  },
+  images: {
+    loader: process.env.NODE_ENV == "development" ? "default" : "imgix",
+    path: process.env.NODE_ENV == "development" ? "/_next/image" : "",
   },
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     // Note: we provide webpack above so you should not `require` it
