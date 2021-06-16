@@ -17,7 +17,7 @@ export default function OurPartners() {
           height="35%"
           src="/partners.png"
           layout="responsive"
-          className=""
+          alt=""
         />
       </div>
     </div>

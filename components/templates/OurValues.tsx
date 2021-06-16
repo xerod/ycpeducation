@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 import Header from "../elements/Header";
 import Card from "../elements/Card";
@@ -13,11 +14,13 @@ export default function OurValues() {
 
       <div className="absolute bottom-0 left-0 right-0 hidden h-64 bg-white lg:block" />
 
-      <img
-        src={imageLoader({
-          src: "/ornament.svg"
-        })}
+      <Image
+        loader={imageLoader}
+        src="/ornament.svg"
+        width="100%"
+        height="100%"
         className="absolute z-0 hidden lg:block left-10 bottom-28 "
+        alt=""
       />
 
       <div className="relative z-10 grid grid-flow-row gap-5 mt-10 lg:grid-flow-col">

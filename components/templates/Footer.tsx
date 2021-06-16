@@ -36,10 +36,11 @@ export default function Footer() {
 
         <div className="relative z-10 w-full lg:max-w-md">
           <div className="flex items-center">
-            <img
-              src={imageLoader({
-                src: "/about-us-1.png",
-              })}
+            <Image
+              loader={imageLoader}
+              width="100%"
+              height="100%"
+              src="/about-us-1.png"
               alt="Tatsuichiro Nishimura"
               className="border-4 rounded-full w-28 h-28 border-gray-50"
             />
@@ -54,10 +55,11 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center mt-8">
-            <img
-              src={imageLoader({
-                src: "/about-us-2.png",
-              })}
+            <Image
+              loader={imageLoader}
+              width="100%"
+              height="100%"
+              src="/about-us-2.png"
               alt="Naithy Cyriac"
               className="border-4 rounded-full w-28 h-28 border-gray-50"
             />
@@ -77,6 +79,7 @@ export default function Footer() {
           layout="fill"
           src="/about-us-cover.png"
           className="absolute z-0 object-cover opacity-10"
+          alt="A Skyline of Hong Kong"
         />
 
         <p className="absolute left-0 right-0 text-sm text-center text-gray-500 bottom-4">

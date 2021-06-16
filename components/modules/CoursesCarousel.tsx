@@ -1,6 +1,6 @@
 import { Button } from "@windmill/react-ui";
 import React, { useState } from "react";
-import Link from "next/link";
+import Image from "next/image";
 
 import {
   IoChevronForward,
@@ -238,11 +238,13 @@ export default function CoursesCarousel() {
           </div>
 
           <div>
-            <img
+            <Image
+              loader={imageLoader}
+              width="100%"
+              height="100%"
               className="hidden object-cover max-w-md min-h-full lg:block"
-              src={imageLoader({
-                src: data[selected].image,
-              })}
+              src={data[selected].image}
+              alt=""
             />
           </div>
         </div>
@@ -282,7 +284,7 @@ const Description: React.FC<DescriptionProps> = (props) => {
         iconRight={IoChevronForward}
         className={`text-amber-600 hover:bg-transparent`}
       >
-        I'm interested
+        I&aposm interested
       </Button>
     </div>
   );

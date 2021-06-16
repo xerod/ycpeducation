@@ -25,6 +25,7 @@ const Card: React.FC<CardProps> = ({ title, body, image, variant, icon }) => {
             layout="responsive"
             className="absolute top-0 object-cover w-full bg-mask-b-0 "
             src={image}
+            alt=""
           />
         ) : null}
         <div className="absolute bottom-0 p-8 text-white">
@@ -57,6 +58,7 @@ const Card: React.FC<CardProps> = ({ title, body, image, variant, icon }) => {
           height="60%"
           layout="responsive"
           className="object-cover w-full"
+          alt=""
           src={image}
         />
       ) : null}

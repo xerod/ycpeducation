@@ -2,6 +2,8 @@ import React from "react";
 import { IoCallOutline, IoMailOutline } from "react-icons/io5";
 import imageLoader from "../../utils/imageLoader";
 
+import Image from "next/image";
+
 export default function ContactCard() {
   return (
     <div className="relative z-10 flex justify-between px-4 overflow-hidden shadow-xl lg:px-10 xl:px-16 py-14 lg:mx-32 bg-gradient-to-r from-gray-900 to-gray-600 lg:rounded-xl">
@@ -35,11 +37,13 @@ export default function ContactCard() {
         </p>
       </div>
 
-      <img
-        src={imageLoader({
-          src: "/map-base.svg",
-        })}
+      <Image
+        loader={imageLoader}
+        width="100%"
+        height="100%"
+        src="/map-base.svg"
         className="absolute top-0 left-0 z-0"
+        alt=""
       />
     </div>
   );

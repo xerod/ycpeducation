@@ -42,14 +42,23 @@ export default function OurProgrammes() {
         <ListCard data={data} />
 
         <div className="relative items-center justify-center">
-          <img
-          src={imageLoader({
-            src: "/ornament.svg"
-          })}
+          <Image
+            loader={imageLoader}
+            src="/ornament.svg"
+            width="100%"
+            height="100%"
             className="absolute hidden lg:block left-12 bottom-12"
+            alt=""
           />
+
           <div className="hidden lg:block">
-            <Image loader={imageLoader} width={600} height={600} src="/our-programmes.png" />
+            <Image
+              loader={imageLoader}
+              width={600}
+              height={600}
+              src="/our-programmes.png"
+              alt=""
+            />
           </div>
         </div>
       </div>
